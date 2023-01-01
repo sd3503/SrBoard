@@ -1,0 +1,46 @@
+package egovframework.SrBoard.Board;
+
+import java.util.List;
+
+import egovframework.example.sample.service.SampleDefaultVO;
+import egovframework.example.sample.service.SampleVO;
+
+public class SrBoardDAOMaria implements SrBoardDAO{
+
+	@Override
+	public void insertSrBoard(SrBoardVO vo) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateSrBoard(SrBoardVO vo) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteSrBoard(SrBoardVO vo) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public SampleVO selectSrBoard(SrBoardVO vo) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<?> selectSrBoardList(SampleDefaultVO searchVO) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int selectSrBoardListTotCnt(SampleDefaultVO searchVO) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

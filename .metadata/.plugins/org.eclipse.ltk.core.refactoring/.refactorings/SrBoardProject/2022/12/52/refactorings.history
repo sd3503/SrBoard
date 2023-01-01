@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;testMapper.xml&apos; to &apos;mappers&apos;" description="Move &apos;testMapper.xml&apos; to &apos;mappers&apos;" destination="src/main/resources/egovframework/sqlmap/mappers" element1="src/main/resources/egovframework/spring/testMapper.xml" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1671758198189" updateReferences="true"/>
+</session>

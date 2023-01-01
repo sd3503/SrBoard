@@ -1,0 +1,20 @@
+package egovframework.SrBoard.Board;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class SrBoardServiceImpl implements SrBoardService{
+
+	@Override
+	public void Write() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Remove() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

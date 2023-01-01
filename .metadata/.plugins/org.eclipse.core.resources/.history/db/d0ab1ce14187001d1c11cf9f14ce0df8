@@ -1,0 +1,12 @@
+package egovframework.SrBoard.Board;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import egovframework.example.sample.service.SampleDefaultVO;
+import egovframework.example.sample.service.SampleVO;
+@Repository
+public class SrBoardDAOMaria implements SrBoardDAO{
+
+}

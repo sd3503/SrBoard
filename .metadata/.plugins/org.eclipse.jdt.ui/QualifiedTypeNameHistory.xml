@@ -1,2 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+<fullyQualifiedTypeName name="egovframework.sr.board.all.SrBoardService"/>
+<fullyQualifiedTypeName name="egovframework.rte.psl.dataaccess.mapper.Mapper"/>
+<fullyQualifiedTypeName name="javax.annotation.Resource"/>
+<fullyQualifiedTypeName name="antlr.collections.List"/>
+<fullyQualifiedTypeName name="egovframework.sr.board.all.SrBoardMapper"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="egovframework.sr.board.all.SrBoardVO"/>
+<fullyQualifiedTypeName name="egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.annotations.Insert"/>
+<fullyQualifiedTypeName name="egovframework.rte.psl.dataaccess.EgovAbstractDAO"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+<fullyQualifiedTypeName name="egovframework.sr.board.all.SrBoardDAOMaria"/>
+</qualifiedTypeNameHistroy>

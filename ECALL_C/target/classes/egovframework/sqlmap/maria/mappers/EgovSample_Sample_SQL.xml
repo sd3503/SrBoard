@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="egovframework.sr.board.all.SrBoardMapper">
+<!-- 
+	<resultMap id="SrBoard" type="egovframework.sr.board.all.SrBoardVO">
+		<result property="idx" column="idx"/>
+		<result property="regDate" column="regDate"/>
+		<result property="srSequence" column="srSequence"/>
+		<result property="department" column="department"/>
+		<result property="path" column="path"/>
+		<result property="writer" column="writer"/>
+		<result property="phone" column="phone"/>
+		<result property="subject" column="subject"/>
+		<result property="fildWorker" column="fildWorker"/>
+		<result property="Content" column="Content"/>
+		<result property="result" column="result"/>
+		<result property="request" column="request"/>
+		<result property="exEndDate" column="exEndDate"/>
+		<result property="endDate" column="endDate"/>
+		<result property="spendDate" column="spendDate"/>
+	</resultMap>
+	<insert id="insertSrBoard" parameterType="egovframework.sr.board.all.SrBoardVO">
+
+			INSERT INTO SRBOARD
+				( ID
+				  , NAME
+				  , DESCRIPTION
+				  , USE_YN
+				  , REG_USER )
+			VALUES ( #{id}
+				  , #{name}
+				  , #{description}
+				  , #{useYn}
+				  , #{regUser} )
+
+	</insert>
+
+	<update id="updateSrBoard">
+
+			UPDATE SRBOARD
+			SET ID=#{id}
+				, NAME=#{name}
+				, DESCRIPTION=#{description}
+				, USE_YN=#{useYn}
+				  WHERE ID=#{id}
+
+	</update>
+
+	<delete id="deleteSrBoard">
+
+			DELETE FROM SRBOARD
+			WHERE ID=#{id}
+
+	</delete>
+
+	<select id="selectSrBoard" resultMap="SrBoard">
+
+			SELECT
+				ID, NAME, DESCRIPTION, USE_YN, REG_USER
+			FROM SRBOARD
+			WHERE ID=#{id}
+
+	</select>
+
+	<select id="selectSrBoardList" parameterType="egovframework.sr.board.all.SrBoardVO" resultType="egovframework.sr.board.all.SrBoardPageVO">
+
+			SELECT
+				ID, NAME, DESCRIPTION, USE_YN, REG_USER
+			FROM SRBOARD
+			WHERE 1=1
+			<if test="searchKeyword != null and searchKeyword != ''">
+		        <choose>
+		            <when test="searchCondition == 0">
+						AND	ID LIKE '%' || #{searchKeyword} || '%'
+					</when>
+		            <when test="searchCondition == 1">
+						AND	NAME LIKE '%' || #{searchKeyword} || '%'
+					</when>
+				</choose>
+			</if>
+			ORDER BY ID ASC
+			LIMIT #{recordCountPerPage} OFFSET #{firstIndex}
+	</select>
+
+	<select id="selectSrBoardListTotCnt" parameterType="egovframework.sr.board.all.SrBoardVO" resultType="int">
+
+			SELECT COUNT(*) TOTCNT
+			FROM SAMPLE
+			WHERE 1=1
+			<if test="searchKeyword != null and searchKeyword != ''">
+		        <choose>
+		            <when test="searchCondition == 0">
+						AND ID LIKE '%' || #{searchKeyword} || '%'
+					</when>
+		            <when test="searchCondition == 1">
+						AND	NAME LIKE '%' || #{searchKeyword} || '%'
+					</when>
+				</choose>
+			</if>
+	</select>
+	
+	 -->
+	
+	
+	<select id="testDB" parameterType="egovframework.sr.board.all.SrBoardVO">
+
+			SELECT
+				*
+			FROM SRBOARD
+	</select>
+</mapper>

@@ -1,6 +1,6 @@
 package egovframework.sr.board.all;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class SrBoardVO {
 	private Long idx;

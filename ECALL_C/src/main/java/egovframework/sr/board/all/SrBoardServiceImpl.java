@@ -11,8 +11,8 @@ import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
 @Service("SrService")
 public class SrBoardServiceImpl extends EgovAbstractServiceImpl implements SrBoardService{
 	
-	@Resource(name="SrBoardMapper")
-	private SrBoardMapper test;
+	@Resource(name="SrBoardDAO")
+	private SrBoardDAO test;
 
 	@Override
 	public void SrBoardWrite(int idx) throws Exception {
@@ -37,12 +37,13 @@ public class SrBoardServiceImpl extends EgovAbstractServiceImpl implements SrBoa
 		// TODO Auto-generated method stub
 		
 	}
-
-	@Override
-	public List<SrBoardVO> testDB() throws Exception {
-		List<SrBoardVO> data =  test.testDB();
-		return data;
-	}
+	
+	 @Override public List<SrBoardVO2> testDB() throws Exception { 
+		 List<SrBoardVO2> data = test.testDB(); 
+		 return data; 
+		 
+	 }
+	 
 	
 	
 

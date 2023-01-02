@@ -11,5 +11,5 @@ public interface SrBoardService {
 	
 	public void SrBoardGetAll (SrBoardVO srBoardVO) throws Exception;
 	
-	public List<SrBoardVO> testDB() throws Exception;
+	public List<SrBoardVO2> testDB() throws Exception; 
 }

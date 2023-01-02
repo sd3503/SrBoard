@@ -1,5 +1,7 @@
 package egovframework.sr.board.all;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
@@ -22,6 +24,12 @@ public class SrBoardController {
 	@GetMapping("/testDB.do")
 	public @ResponseBody String testDB() throws Exception{
 	
-		return SrBoardService.testDB().get(0).getContent();
+		try {
+			List<SrBoardVO2> test = SrBoardService.testDB();
+			return test.toString();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		return null;
 	}
 }

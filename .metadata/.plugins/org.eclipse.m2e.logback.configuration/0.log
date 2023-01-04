@@ -2114,3 +2114,22 @@
 2023-01-03 19:51:21,559 [Worker-0: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ECALL_C
 2023-01-03 19:51:34,511 [Worker-36: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ECALL_C
 2023-01-03 19:51:34,512 [Worker-36: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ECALL_C
+2023-01-04 09:08:49,322 [Worker-82: Updating Maven Project] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for ECALL_C
+2023-01-04 09:08:49,779 [Worker-79: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ECALL_C
+2023-01-04 09:08:49,779 [Worker-79: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ECALL_C
+2023-01-04 12:47:35,932 [Worker-228: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ECALL_C
+2023-01-04 12:47:35,933 [Worker-228: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ECALL_C
+2023-01-04 12:47:37,248 [Worker-228: Updating Maven Project] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for ECALL_C
+2023-01-04 12:47:38,171 [Worker-228: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ECALL_C
+2023-01-04 12:47:38,171 [Worker-228: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ECALL_C
+2023-01-04 12:48:13,579 [Worker-226: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ECALL_C
+2023-01-04 12:48:13,579 [Worker-226: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ECALL_C
+2023-01-04 12:48:45,252 [Worker-232: Updating Maven Project] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for ECALL_C
+2023-01-04 12:48:45,722 [Worker-237: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ECALL_C
+2023-01-04 12:48:45,722 [Worker-237: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ECALL_C
+2023-01-04 15:25:36,276 [main] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for test2222
+2023-01-04 15:25:36,669 [Worker-341: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of test2222
+2023-01-04 15:25:36,670 [Worker-341: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for test2222
+2023-01-04 15:25:49,917 [main] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for test2222
+2023-01-04 15:25:50,407 [Worker-339: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of test2222
+2023-01-04 15:25:50,407 [Worker-339: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for test2222

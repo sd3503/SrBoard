@@ -14,19 +14,19 @@ public class SrBoardPageVO {
 	/** 현재페이지 */
 	private int pageIndex = 1;
 
-	/** 페이지갯수 */
+	/** 페이지당 게시글 수 */
 	private int pageUnit = 10;
 
-	/** 페이지사이즈 */
+	/** 한 페이지에 전개되는 페이지 수 */
 	private int pageSize = 10;
 
-	/** firstIndex */
+	/** 첫번째 페이지 */
 	private int firstIndex = 1;
 
-	/** lastIndex */
+	/** 마지막 페이지 */
 	private int lastIndex = 1;
 
-	/** recordCountPerPage */
+	/** 페이지당 게시글 수 */
 	private int recordCountPerPage = 10;
 
 	public String getSearchCondition() {

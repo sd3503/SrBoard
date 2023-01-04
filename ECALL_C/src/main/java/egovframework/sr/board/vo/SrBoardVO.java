@@ -128,6 +128,9 @@ public class SrBoardVO {
 		this.endDate = endDate;
 		this.spendDate = spendDate;
 	}
+	public SrBoardVO() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	
 	

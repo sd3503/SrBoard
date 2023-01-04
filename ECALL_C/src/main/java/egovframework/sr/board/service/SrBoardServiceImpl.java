@@ -16,12 +16,12 @@ import egovframework.sr.board.vo.SrBoardVO2;
 public class SrBoardServiceImpl implements SrBoardService{
 	
 	@Resource(name="SrBoardDAO")
-	private SrBoardDAO test;
+	private SrBoardDAO SrBoardDAO;
 	
 	 @Override public void testDB() throws Exception { 
 		 SrBoardVO2 testVO = new SrBoardVO2(0L, "test");
 		 
-		 test.InsertDataTest(testVO);
+		 SrBoardDAO.InsertDataTest(testVO);
 	 }
 
 	@Override
@@ -51,7 +51,7 @@ public class SrBoardServiceImpl implements SrBoardService{
 	@Override
 	public List<?> selectSrBoardList(SrBoardPageVO searchVO) throws Exception {
 		// TODO Auto-generated method stub
-		return null;
+		return SrBoardDAO.selectSrBoardList(searchVO);
 	}
 
 	@Override

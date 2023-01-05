@@ -2,9 +2,9 @@ package egovframework.sr.board.service;
 
 import java.util.List;
 
+import egovframework.sr.board.vo.PageNationInfo;
 import egovframework.sr.board.vo.SrBoardPageVO;
 import egovframework.sr.board.vo.SrBoardVO;
-import egovframework.sr.board.vo.SrBoardVO2;
 
 public interface SrBoardService {
 	public void WriteSrBoard(SrBoardVO srBoardVO) throws Exception;
@@ -15,9 +15,9 @@ public interface SrBoardService {
 	
 	public SrBoardVO selectSrBoard(SrBoardVO vo) throws Exception;
 
-	public List<?> selectSrBoardList(SrBoardPageVO searchVO) throws Exception;
+	public List<?> selectSrBoardList(SrBoardPageVO pageVO) throws Exception;
 
-	public int selectSrBoardListTotCnt(SrBoardPageVO searchVO);
+	public int selectSrBoardListTotCnt(SrBoardPageVO pageVO);
 	
 	public void testDB() throws Exception; 
 }

@@ -108,30 +108,5 @@ public class SrBoardVO {
 	public void setSpendDate(String spendDate) {
 		this.spendDate = spendDate;
 	}
-	public SrBoardVO(Long idx, Date regDate, int srSequence, String department, int path, String writer, String phone,
-			String subject, String fildWorker, String content, String result, int request, Date exEndDate, Date endDate,
-			String spendDate) {
-		super();
-		this.idx = idx;
-		this.regDate = regDate;
-		this.srSequence = srSequence;
-		this.department = department;
-		this.path = path;
-		this.writer = writer;
-		this.phone = phone;
-		this.subject = subject;
-		this.fildWorker = fildWorker;
-		Content = content;
-		this.result = result;
-		this.request = request;
-		this.exEndDate = exEndDate;
-		this.endDate = endDate;
-		this.spendDate = spendDate;
-	}
-	public SrBoardVO() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	
 	
 }

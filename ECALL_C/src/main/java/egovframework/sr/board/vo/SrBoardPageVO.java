@@ -1,13 +1,31 @@
 package egovframework.sr.board.vo;
 
+import java.util.Date;
+
 public class SrBoardPageVO {
 	
 	/** 검색조건 */
-	private String searchCondition = "";
+	private int searchCondition = 0;
 
 	/** 검색Keyword */
 	private String searchKeyword = "";
 
+	/** 검색시작날짜 */
+	private Date startDate;
+	
+	/** 검색끝날짜 */
+	private Date endDate;
+	
+
+
+	private int dateType = 0;
+	
+	private int request = 0;
+	
+	private int srSequence = 0;
+	
+	private int path = 0;
+	
 	/** 검색사용여부 */
 	private String searchUseYn = "";
 
@@ -26,14 +44,11 @@ public class SrBoardPageVO {
 	/** 마지막 페이지 */
 	private int lastIndex = 1;
 
-	/** 페이지당 게시글 수 */
-	private int recordCountPerPage = 10;
-
-	public String getSearchCondition() {
+	public int getSearchCondition() {
 		return searchCondition;
 	}
 
-	public void setSearchCondition(String searchCondition) {
+	public void setSearchCondition(int searchCondition) {
 		this.searchCondition = searchCondition;
 	}
 
@@ -43,6 +58,46 @@ public class SrBoardPageVO {
 
 	public void setSearchKeyword(String searchKeyword) {
 		this.searchKeyword = searchKeyword;
+	}
+
+	public Date getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+
+	public Date getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
+	}
+
+	public int getRequest() {
+		return request;
+	}
+
+	public void setRequest(int request) {
+		this.request = request;
+	}
+
+	public int getSrSequence() {
+		return srSequence;
+	}
+
+	public void setSrSequence(int srSequence) {
+		this.srSequence = srSequence;
+	}
+
+	public int getPath() {
+		return path;
+	}
+
+	public void setPath(int path) {
+		this.path = path;
 	}
 
 	public String getSearchUseYn() {
@@ -100,20 +155,15 @@ public class SrBoardPageVO {
 	public void setRecordCountPerPage(int recordCountPerPage) {
 		this.recordCountPerPage = recordCountPerPage;
 	}
-
-	public SrBoardPageVO(String searchCondition, String searchKeyword, String searchUseYn, int pageIndex, int pageUnit,
-			int pageSize, int firstIndex, int lastIndex, int recordCountPerPage) {
-		super();
-		this.searchCondition = searchCondition;
-		this.searchKeyword = searchKeyword;
-		this.searchUseYn = searchUseYn;
-		this.pageIndex = pageIndex;
-		this.pageUnit = pageUnit;
-		this.pageSize = pageSize;
-		this.firstIndex = firstIndex;
-		this.lastIndex = lastIndex;
-		this.recordCountPerPage = recordCountPerPage;
+	public int getDateType() {
+		return dateType;
 	}
-	
+
+	public void setDateType(int dateType) {
+		this.dateType = dateType;
+	}
+	/** 페이지당 게시글 수 */
+	private int recordCountPerPage = 10;
+
 	
 }

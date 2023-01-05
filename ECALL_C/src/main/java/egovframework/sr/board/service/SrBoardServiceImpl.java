@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
 import egovframework.sr.board.dao.SrBoardDAO;
+import egovframework.sr.board.vo.PageNationInfo;
 import egovframework.sr.board.vo.SrBoardPageVO;
 import egovframework.sr.board.vo.SrBoardVO;
 import egovframework.sr.board.vo.SrBoardVO2;
@@ -49,15 +50,14 @@ public class SrBoardServiceImpl implements SrBoardService{
 	}
 
 	@Override
-	public List<?> selectSrBoardList(SrBoardPageVO searchVO) throws Exception {
+	public int selectSrBoardListTotCnt(SrBoardPageVO pageVO) {
 		// TODO Auto-generated method stub
-		return SrBoardDAO.selectSrBoardList(searchVO);
+		return SrBoardDAO.selectSrBoardCnt(pageVO);
 	}
 
 	@Override
-	public int selectSrBoardListTotCnt(SrBoardPageVO searchVO) {
-		// TODO Auto-generated method stub
-		return 0;
+	public List<?> selectSrBoardList(SrBoardPageVO pageVO) throws Exception {
+		return SrBoardDAO.selectSrBoardList(pageVO);
 	}
 	
 

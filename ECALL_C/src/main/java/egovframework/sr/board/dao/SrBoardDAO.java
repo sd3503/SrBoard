@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import egovframework.sr.board.vo.PageNationInfo;
 import egovframework.sr.board.vo.SrBoardPageVO;
 import egovframework.sr.board.vo.SrBoardVO;
 import egovframework.sr.board.vo.SrBoardVO2;
@@ -19,13 +20,15 @@ import egovframework.sr.board.vo.SrBoardVO2;
 	    private ResultSet rs;
 
 	    private final String BLOG_REGISTER     = "INSERT INTO TEST(NAME) VALUES(?) ";
-	    private final String SELECTLIST     = "SELECT * FROM SRBOARD ORDER BY IDX DESC LIMIT 0,15 ";
+	    private final String SELECTSRBOARDCNT = "SELECT COUNT(*) totcnt FROM SAMPLE"
+	    											+"WHERE ";
 	    
-	    public List<?> selectSrBoardList(SrBoardPageVO PageVO)
+	    public List<?> selectSrBoardList(SrBoardPageVO pageVO)
 	    {
 	    	try {
+	    		String query = "SELECT * FROM SRBOARD ORDER BY IDX DESC LIMIT 0,15";
 	            conn = JDBCUtil.getConnection();
-	            stmt = conn.prepareStatement(SELECTLIST);
+	            stmt = conn.prepareStatement(query);
 	            rs = stmt.executeQuery();
 	            
 	            List<SrBoardVO> tempList = new ArrayList<>();
@@ -59,6 +62,119 @@ import egovframework.sr.board.vo.SrBoardVO2;
 	        }
 	    	
 	    	return null;
+	    }
+	    
+	    public int selectSrBoardCnt(SrBoardPageVO pageVO)
+	    {
+	    	try {
+	    		String query = "SELECT COUNT(*) totcnt FROM srboard WHERE ( WRITER LIKE ? OR DEPARTMENT LIKE ? OR SUBJECT LIKE ? OR CONTENT LIKE ?)"
+	    						+"AND SRSEQUENCE = ? ";
+	    		
+	            conn = JDBCUtil.getConnection();
+	    		if(pageVO.getRequest() == 0)
+	    		{
+	    			query = query.concat("OR REQUEST = ? ");
+	    		}else
+	    		{
+	    			query = query.concat("AND REQUEST = ? ");
+	    		}
+	    		
+	    		if(pageVO.getPath() == 0)
+	    		{
+	    			query = query.concat("OR PATH = ? ");
+	    		}else
+	    		{
+	    			query = query.concat("AND PATH = ? ");
+	    		}
+
+	    		
+	    		if(pageVO.getDateType() == 0)
+	    		{
+	    			query = query.concat("AND REGDATE BETWEEN ? AND ? ");
+	    		}else if(pageVO.getDateType() == 1)
+	    		{
+	    			query = query.concat("AND EXENDDATE BETWEEN ? AND ? ");
+	    		}else if(pageVO.getDateType() == 2)
+	    		{
+	    			query = query.concat("AND ENDDATE BETWEEN ? AND ? ");
+	    		}
+	    		
+	            stmt = conn.prepareStatement(query);
+	            
+	            
+	            if(pageVO.getSearchCondition() == 0)
+	    		{
+	            	stmt.setString(1, "%" + pageVO.getSearchKeyword() + "%");
+	            	stmt.setString(2, "%" + pageVO.getSearchKeyword() + "%");
+	            	stmt.setString(3, "%" + pageVO.getSearchKeyword() + "%");
+	            	stmt.setString(4, "%" + pageVO.getSearchKeyword() + "%");
+	    		}
+	    		if(pageVO.getSearchCondition() == 1)
+	    		{
+	            	stmt.setString(1, "%" + pageVO.getSearchKeyword() + "%");
+	            	stmt.setString(2, "");
+	            	stmt.setString(3, "");
+	            	stmt.setString(4, "");
+	    		}
+	    		if(pageVO.getSearchCondition() == 2)
+	    		{
+	            	stmt.setString(1, "");
+	            	stmt.setString(2, "%" + pageVO.getSearchKeyword() + "%");
+	            	stmt.setString(3, "");
+	            	stmt.setString(4, "");
+	    		}
+	    		if(pageVO.getSearchCondition() == 3)
+	    		{
+	            	stmt.setString(1, "");
+	            	stmt.setString(2, "");
+	            	stmt.setString(3, "%" + pageVO.getSearchKeyword() + "%");
+	            	stmt.setString(4, "");
+	    		}
+	    		if(pageVO.getSearchCondition() == 4)
+	    		{
+	            	stmt.setString(1, "");
+	            	stmt.setString(2, "");
+	            	stmt.setString(3, "");
+	            	stmt.setString(4, "%" + pageVO.getSearchKeyword() + "%");
+	    		}
+	    		
+	    		if(pageVO.getRequest() == 0)
+	    		{
+	    			
+	    			stmt.setInt(5, 0);
+	    		}else
+	    		{
+	    			stmt.setInt(5, pageVO.getRequest());
+	    		}
+	    		
+	    		if(pageVO.getPath() == 0)
+	    		{
+	    			stmt.setInt(6, 0);
+	    		}else
+	    		{
+	    			stmt.setInt(6, pageVO.getPath());
+	    		}
+	    		stmt.setInt(7, pageVO.getSrSequence());
+	    		
+	    		stmt.setDate(8, new java.sql.Date(pageVO.getStartDate().getTime()));
+	    		stmt.setDate(9, new java.sql.Date(pageVO.getEndDate().getTime()));
+	    		int totcnt = 0;
+	    		rs = stmt.executeQuery();
+	            while (rs.next()) {
+	                
+	            	totcnt = rs.getInt("totcnt");
+	                
+	                
+	            }
+	            return totcnt;
+	            
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        } finally {
+	            JDBCUtil.close(stmt, conn);
+	        }
+	    	
+	    	return 0;
 	    }
 	
 		public void InsertDataTest(SrBoardVO2 vo){

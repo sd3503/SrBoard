@@ -78,7 +78,7 @@
         					</select>
 						</td>
 						<td>
-        					<select name="srSequence" id="srSequence" style="width: 100px">
+        					<select name="path" id="srSequence" style="width: 100px">
         						<option value="0" label="전체" />
         						<option value="1" label="온라인" />
         						<option value="2" label="전자우편" />
@@ -88,7 +88,7 @@
         					</select>
 						</td>
 						<td>
-        					<select name="path" id="path" style="width: 100px">
+        					<select name="srSequence" id="path" style="width: 100px">
         						<option value="0" label="접수전" />
         						<option value="1" label="처리중" />
         						<option value="2" label="처리완료" />
@@ -135,6 +135,7 @@
 						</tr>
 					</thead>
 					<tbody id="tbody">
+					<%if(list != null){%>
 					<%for(i = 0 ; i < list.size(); i++){ %>
 						<tr style="cursor: pointer;" onclick="">
 							<td>
@@ -196,9 +197,10 @@
 							<%if(list.get(i).getSrSequence() == 3){ %>
 								<%=list.get(i).getEndDate() %>
 							<%}%>
+							
 							</td>
 						</tr>
-					
+					<%}%>
 					<%} %>
 					</tbody>	
 				</table>
